@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="images/main/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesContactar.css" />
+    <title>Contactar</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+
+    <!--Barra de Navegação-->
+    <header>
+      <nav class="navbar-side">
+        <div class="nav-side">
+          <ul class="links-side">
+            <li>
+              <div class="top">
+                <svg onclick="hideSidebar()" class="close" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+              </div>
+            </li>
+            <li><a href="SobreNos.html">Sobre Nós</a></li>
+            <li><a href="Index.html#explorar">Explorar</a></li>
+            <li><a href="Index.html#faq">FAQ</a></li>
+            <li><a href="Contactar.html">Contactar</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="Index.html">Plobe<span>*</span></a>
+        </div>
+        <div class="nav-links">
+          <ul class="nav-top">
+            <li><a href="SobreNos.html">Sobre Nós</a></li>
+            <li><a href="Index.html#explorar">Explorar</a></li>
+            <li><a href="Index.html#faq">FAQ</a></li>
+            <li><a href="Contactar.html">Contactar</a></li>
+          </ul>
+        </div>
+        <div class="date-time">
+          <div id="Time"></div>
+          <div id="Date"></div>
+          <script src="time.js"></script>
+        </div>
+        <svg onclick="showSideBar()" class="sideBarIcon" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+      </nav>
+    </header>
+
+    <main>
+      <div id="root"></div>
+
+      <!--FOrmulário de contacto-->
+      <script type="text/babel">
+        const { useState } = React;
+
+        function ContactForm() {
+          const [formData, setFormData] = useState({
+            nome: "",
+            razao: "",
+            email: "",
+            telemovel: "",
+            mensagem: "",
+          });
+
+          const [errors, setErrors] = useState({});
+
+          const validate = () => {
+            const newErrors = {};
+            if (!formData.nome.trim())
+              newErrors.nome = "O campo 'Nome' é obrigatório.";
+            if (!formData.razao)
+              newErrors.razao = "O campo 'Razão' é obrigatório.";
+            if (!formData.email.trim()) {
+              newErrors.email = "O campo 'Email' é obrigatório.";
+            } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+              newErrors.email = "O formato do 'Email' é inválido.";
+            }
+            if (!formData.telemovel.trim()) {
+              newErrors.telemovel = "O campo 'Telemóvel' é obrigatório.";
+            } else if (!/^\d+$/.test(formData.telemovel)) {
+              newErrors.telemovel = "O 'Telemóvel' deve conter apenas números.";
+            }
+            if (!formData.mensagem.trim())
+              newErrors.mensagem = "O campo 'Mensagem' é obrigatório.";
+            return newErrors;
+          };
+
+          const handleChange = (e) => {
+            const { name, value } = e.target;
+            setFormData({ ...formData, [name]: value });
+          };
+
+          const handleSubmit = (e) => {
+            e.preventDefault();
+            const validationErrors = validate();
+            if (Object.keys(validationErrors).length > 0) {
+              setErrors(validationErrors);
+            } else {
+              setErrors({});
+              localStorage.setItem("contactFormData", JSON.stringify(formData));
+              alert("Formulário enviado e salvo no LocalStorage!");
+              setFormData({
+                nome: "",
+                razao: "",
+                email: "",
+                telemovel: "",
+                mensagem: "",
+              });
+            }
+          };
+
+          return (
+            <div className="form-container">
+              <h1>Contactar</h1>
+              <form onSubmit={handleSubmit}>
+                <div className="form-field">
+                  <label htmlFor="nome">Nome:</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    value={formData.nome}
+                    onChange={handleChange}
+                  />
+                  {errors.nome && (
+                    <div className="error-box">{errors.nome}</div>
+                  )}
+                </div>
+                <div className="form-field">
+                  <label htmlFor="razao">Razão:</label>
+                  <select
+                    id="razao"
+                    name="razao"
+                    value={formData.razao}
+                    onChange={handleChange}
+                  >
+                    <option value="">-- Selecionar --</option>
+                    <option value="information">Informação</option>
+                    <option value="complaint">Reclamação</option>
+                    <option value="other">Outro</option>
+                  </select>
+                  {errors.razao && (
+                    <div className="error-box">{errors.razao}</div>
+                  )}
+                </div>
+                <div className="form-field">
+                  <label htmlFor="email">Email:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  {errors.email && (
+                    <div className="error-box">{errors.email}</div>
+                  )}
+                </div>
+                <div className="form-field">
+                  <label htmlFor="telemovel">Telemóvel:</label>
+                  <input
+                    type="text"
+                    id="telemovel"
+                    name="telemovel"
+                    value={formData.telemovel}
+                    onChange={handleChange}
+                  />
+                  {errors.telemovel && (
+                    <div className="error-box">{errors.telemovel}</div>
+                  )}
+                </div>
+                <div className="form-field">
+                  <label htmlFor="mensagem">Mensagem:</label>
+                  <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    value={formData.mensagem}
+                    onChange={handleChange}
+                  ></textarea>
+                  {errors.mensagem && (
+                    <div className="error-box">{errors.mensagem}</div>
+                  )}
+                </div>
+                <button class="cta-button" type="submit">Submeter</button>
+              </form>
+            </div>
+          );
+        }
+
+        ReactDOM.createRoot(document.getElementById("root")).render(
+          <ContactForm />
+        );
+      </script>
+      <script src="script.js"></script>
+      <script src="navbar.js"></script>
+
+    </main>
+
+    <!--Footer-->
+    <footer class="rounded-footer">
+        <div>
+            <p>Ana Almeida, Gonçalo Lameira, Susana Tavares</p>
+            <p>&copy; 2025 Plobe. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="images/main/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Plobe</title>
+  </head>
+
+  <body>
+
+    <!--Barra de Navegação-->
+    <header>
+      <nav class="navbar-side">
+        <div class="nav-side">
+          <ul class="links-side">
+            <li>
+              <div class="top">
+                <svg onclick="hideSidebar()" class="close" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+              </div>
+            </li>
+            <li><a href="SobreNos.html">Sobre Nós</a></li>
+            <li><a href="#explorar">Explorar</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="Contactar.html">Contactar</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="Index.html">Plobe<span>*</span></a>
+        </div>
+        <div class="nav-links">
+          <ul class="nav-top">
+            <li><a href="SobreNos.html">Sobre Nós</a></li>
+            <li><a href="#explorar">Explorar</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="Contactar.html">Contactar</a></li>
+          </ul>
+        </div>
+        <div class="date-time">
+          <div id="Time"></div>
+          <div id="Date"></div>
+          <script src="time.js"></script>
+        </div>
+        <svg onclick="showSideBar()" class="sideBarIcon" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+      </nav>
+    </header>
+
+    <main>
+      <div class="slider-container" id="explorar">
+        <div class="slides">
+          <!-- Slide 1 -->
+          <div class="slide active">
+            <img src="images/main/slider1.jpg" alt="Algar de Benagil" />
+            <div class="text-overlay"></div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <img src="images/main/slider2.jpg" alt="Serra da Estrela" />
+            <div class="text-overlay"></div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <img src="images/main/slider3.jpg" alt="Costa Vicentina" />
+            <div class="text-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Menu dropdown com todos os distritos -->
+        <div class="middle">
+          <div class="container">
+            <h1>Explore os Distritos de Portugal</h1>
+            <select id="distritos">
+              <option value="">Selecione um distrito</option>
+              <option value="Aveiro.html">Aveiro</option>
+              <option value="Braga.html">Braga</option>
+              <option value="Coimbra.html">Coimbra</option>
+              <option value="Faro.html">Faro</option>
+              <option value="Leiria.html">Leiria</option>
+              <option value="Lisboa.html">Lisboa</option>
+              <option value="Porto.html">Porto</option>
+              <option value="Viana_do_Castelo.html">Viana do Castelo</option>
+              <option value="Viseu.html">Viseu</option>
+            </select>
+            <br />
+            <button class="cta-button" onclick="explorarDistrito()">
+              Explorar
+            </button>
+          </div>
+        </div>
+
+          <!-- Seta "Desliza para baixo" -->
+        <div class="scroll-indicator">
+          <p>Desliza para baixo</p>
+          <span>&darr;</span>
+        </div>
+      </div>
+
+      <!-- Infos sobre o website -->
+      <div class="conhecer" id="sobrenos">
+        <h1 class="conhecer-p">Conhecer antes de viajar<span>*</span></h1>
+        <p>Obtém informações sobre o teu próximo destino.</p>
+        <div class="icons">
+          <div class="SimplesIntuitivo">
+            <img src="images/main/simplesintuitivo.png" />
+            <h2>Simples e intuitivo</h2>
+            <p>Informações apresentadas<br />de forma fácil e organizada.</p>
+          </div>
+          <div class="SugestoesCulturais">
+            <img src="images/main/SugestoesCulturais.png" />
+            <h2>Sugestões Culturais</h2>
+            <p>
+              Sabe mais sobre<br />tradições e pontos<br />históricos locais.
+            </p>
+          </div>
+          <div class="DicasGastronomia">
+            <img src="images/main/DicasGastronomia.png" />
+            <h2>Dicas de Gastronomia</h2>
+            <p>Descobre os pratos típicos<br />e onde saboreá-los.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagem "Aproveita a Viagem" -->
+      <div class="aproveita">
+        <img src="images/main/image31.png" alt="image31" />
+        <div class="aproveita-txt">
+          <h1>Aproveita a<br />Viagem.</h1>
+        </div>
+      </div>
+
+      <!-- Secção "Bom português come tudo" -->
+      <div class="section">
+        <div class="images">
+          <img
+            src="images/main/francesinha-1.png"
+            alt="Francesinha"
+            class="francesinha"
+          />
+          <img
+            src="images/main/pastelnata-1.png"
+            alt="Pastel de Nata"
+            class="pastelnata"
+          />
+        </div>
+        <div class="text">
+          <h1>Bom português come <span class="highlight">TUDO</span>.</h1>
+          <img src="images/main/bigode.png" alt="Bigode" class="bigode" />
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-container" id="faq">
+        <h1>FAQ</h1>
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>O que é este site?</h3>
+          </div>
+          <div class="faq-content">
+            <p>
+              Este é um website dedicado a explorar a cultura, os pontos
+              turísticos, opções de lazer e a gastronomia dos diversos distritos
+              de Portugal. Através de uma experiência intuitiva, poderá
+              selecionar um distrito e aceder a informações detalhadas sobre o
+              que ele tem para oferecer.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Como funciona o website?</h3>
+          </div>
+          <div class="faq-content">
+            <p>
+              O website apresenta um menu dropdown onde pode selecionar um
+              distrito. Após escolher o distrito e carregar no botão
+              correspondente, será redirecionado para uma página com todas as
+              informações relevantes, incluindo locais de interesse, tradições
+              culturais, atividades de lazer e pratos típicos.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>
+              Todos os distritos de Portugal estão disponíveis no website?
+            </h3>
+          </div>
+          <div class="faq-content">
+            <p>
+              Não, para efeitos práticos e seguindo as orientações do nosso
+              projeto, o website inclui apenas alguns distritos de exemplo.
+              Assim, poderá explorar os conteúdos selecionados, mas não
+              encontrará informações para todos os distritos de Portugal.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>
+              O que acontece se eu tentar aceder a um distrito que não está
+              disponível?
+            </h3>
+          </div>
+          <div class="faq-content">
+            <p>
+              Todos os distritos presentes no website têm página criada e completa.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Porque é que algumas informações podem parecer incompletas?</h3>
+          </div>
+          <div class="faq-content">
+            <p>
+              O website foi desenvolvido como um exemplo para mostrar as
+              possibilidades de apresentação de conteúdos regionais. Algumas
+              informações podem ser limitadas para cumprir os requisitos do
+              projeto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="rounded-footer">
+      <div>
+        <p>Ana Almeida, Gonçalo Lameira, Susana Tavares</p>
+        <p>&copy; 2025 Plobe. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="navbar.js"></script>
+  </body>
+</html>

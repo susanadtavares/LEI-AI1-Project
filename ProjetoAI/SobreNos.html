@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/main/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesSobrenos.css" />
+    <title>Sobre Nós</title>
+</head>
+<body>
+    
+    <!--Barra de Navegação-->
+    <header>
+        <nav class="navbar-side">
+          <div class="nav-side">
+            <ul class="links-side">
+              <li>
+                <div class="top">
+                  <svg onclick="hideSidebar()" class="close" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </div>
+              </li>
+              <li><a href="SobreNos.html">Sobre Nós</a></li>
+              <li><a href="Index.html#explorar">Explorar</a></li>
+              <li><a href="Index.html#faq">FAQ</a></li>
+              <li><a href="Contactar.html">Contactar</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar">
+          <div class="logo">
+            <a href="Index.html">Plobe<span>*</span></a>
+          </div>
+          <div class="nav-links">
+            <ul class="nav-top">
+              <li><a href="SobreNos.html">Sobre Nós</a></li>
+              <li><a href="Index.html#explorar">Explorar</a></li>
+              <li><a href="Index.html#faq">FAQ</a></li>
+              <li><a href="Contactar.html">Contactar</a></li>
+            </ul>
+          </div>
+          <div class="date-time">
+            <div id="Time"></div>
+            <div id="Date"></div>
+            <script src="time.js"></script>
+          </div>
+          <svg onclick="showSideBar()" class="sideBarIcon" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </nav>
+    </header>
+
+    <!--Informação sobre nós-->
+    <main>
+        <div class="container">
+            <h1>Sobre Nós</h1>
+            <div class="team">
+                <div class="team-member">
+                    <img src="images/somosnos/anaAlmeida.jpeg" alt="Foto de Pessoa 1">
+                    <h2>Ana Almeida</h2>
+                    <p>Gosto de tudo o que envolva tecnologia e criação digital, principalmente quando se trata de desenvolver sites e aplicações web. Nos meus projetos, tento sempre encontrar um equilíbrio entre funcionalidade e um design fixe. Quando não estou a programar, gosto de ouvir música, ver séries e descobrir novos bares por aí.</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/somosnos/goncalo_foto.jpeg" alt="Foto de Pessoa 2">
+                    <h2>Gonçalo Lameira</h2>
+                    <p>Futuro Engenheiro Informático, especialista na arte do Ctrl+C Ctrl+V. Adoro comer, dormir e de vez enquando (raramente) tomar banho para pensar na vida. Jovem com ambição e grandes espectativas para o futuro. Espero futuramente poder finalmente ajudar a minha avó a concertar o ar condicionado.</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/somosnos/susanaTavares.jpeg" alt="Foto de Pessoa 3">
+                    <h2>Susana Tavares</h2>
+                    <p>Estudante do 2º Ano da Licenciatura em Engenharia Informática, com interesse em desenvolvimento de software (backend e frontend) e engenharia de software. Com grande espírito crítico e proatividade, bom para testes de software e análise de sistemas. Especial interesse por softwares críticos, nas áreas de gestão, economia e finanças.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Fotter-->
+    <footer class="rounded-footer">
+        <div>
+            <p>Ana Almeida, Gonçalo Lameira, Susana Tavares</p>
+            <p>&copy; 2025 Plobe. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/Imagens_Aveiro/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="Distritos.css">
+    <title>Aveiro</title>
+</head>
+<body>
+
+    <!--Barra de Navegação-->
+    <header>
+        <nav class="navbar-side">
+            <div class="nav-side">
+              <ul class="links-side">
+                <li>
+                  <div class="top">
+                    <svg onclick="hideSidebar()" class="close" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                  </div>
+                </li>
+                <li><a href="SobreNos.html">Sobre Nós</a></li>
+                <li><a href="Index.html#explorar">Explorar</a></li>
+                <li><a href="Index.html#faq">FAQ</a></li>
+                <li><a href="Contactar.html">Contactar</a></li>
+              </ul>
+            </div>
+          </nav>
+          <nav class="navbar">
+            <div class="logo">
+              <a href="Index.html">Plobe<span>*</span></a>
+            </div>
+            <div class="nav-links">
+              <ul class="nav-top">
+                <li><a href="SobreNos.html">Sobre Nós</a></li>
+                <li><a href="Index.html#explorar">Explorar</a></li>
+                <li><a href="Index.html#faq">FAQ</a></li>
+                <li><a href="Contactar.html">Contactar</a></li>
+              </ul>
+            </div>
+            <div class="date-time">
+              <div id="Time"></div>
+              <div id="Date"></div>
+              <script src="Distritos.js"></script>
+            </div>
+            <svg onclick="showSideBar()" class="sideBarIcon" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+          </nav>
+    </header>
+
+    <main>
+        <!--Imagem-->
+        <div class="hero">
+            <img src="images/Imagens_Aveiro/Aveiro.png" alt="Aveiro">
+            <div class="hero-next">
+                <h1>Aveiro</h1>
+            </div>
+        </div>
+
+        <!--Botões -->
+        <div class="tabs">
+            <button class="tab active" onclick="showSection('historia')">História</button>
+            <button class="tab" onclick="showSection('pontos-turisticos')">Pontos Turísticos</button>
+            <button class="tab" onclick="showSection('lazer')">Lazer</button>
+            <button class="tab" onclick="showSection('gastronomia')">Gastronomia</button>
+        </div>
+
+        <!--Corpo de texto Botão História-->
+        <section id="historia" class="content">
+            <p>As origens de Aveiro remontam à época romana, quando a região era conhecida como Aviarium, devido à abundância de aves nos pântanos da lagoa adjacente. Durante o período romano, a cidade desenvolveu-se como um centro de salicultura e pesca, atividades facilitadas pela proximidade ao Atlântico e à Ria de Aveiro.</p>
+            <p>Nos séculos XV e XVI, Aveiro prosperou como um importante porto marítimo durante a Era dos Descobrimentos. Os navegadores de Aveiro participaram nas expedições portuguesas, e a cidade beneficiou do comércio marítimo. A produção de sal e o transporte de mercadorias consolidaram a sua importância económica. Foi também durante este período que Santa Joana, filha do rei D. Afonso V, viveu no Convento de Jesus, hoje transformado no Museu de Aveiro.</p>
+            <p>Nos séculos XVII e XVIII, Aveiro enfrentou dificuldades económicas devido ao assoreamento da barra, que limitou o acesso marítimo e reduziu a atividade portuária. Contudo, a cidade adaptou-se, apostando na revitalização da produção de sal e na exploração da Ria. A construção de infraestruturas, como canais e diques, ajudou a melhorar a navegabilidade e a promover o comércio interno. </p>
+            <p>O século XIX foi um período de revitalização para Aveiro. Em 1808, a reabertura da barra marítima impulsionou novamente o comércio e a atividade portuária. A cidade tornou-se um importante centro de pesca, salicultura e comércio de bacalhau. A chegada do caminho-de-ferro em 1864 também foi um marco importante, integrando Aveiro na rede nacional de transportes e contribuindo para o desenvolvimento industrial e comercial.</p>
+            <p>No século XX, Aveiro consolidou-se como um centro industrial, comercial e turístico. A cidade destacou-se pela produção de cerâmica, vidro e porcelana, além de manter as suas tradições de pesca e salicultura. A introdução dos moliceiros, barcos tradicionais da Ria, tornou-se um símbolo da cidade. Durante este período, Aveiro também se tornou conhecida pelos seus edifícios em estilo Art Nouveau, que continuam a ser uma das principais atrações da cidade.</p>
+            <p>Hoje, Aveiro é uma cidade moderna e dinâmica, que combina tradição com inovação. O turismo é uma das principais atividades económicas, impulsionado pelos canais da Ria de Aveiro, os passeios de moliceiro, e a rica gastronomia local, como os famosos ovos moles. A Universidade de Aveiro, fundada em 1973, transformou a cidade num polo de inovação e conhecimento, com impacto significativo na economia e cultura local.</p>
+        </section>
+
+        <!--Corpo de texto Botão Pontos Turísticos-->
+        <section id="pontos-turisticos" class="content">
+            <h3>Património Histórico e Arquitetónico</h3>
+            <ul>
+                <li>Arte Nova: Aveiro é conhecida pelas suas casas em estilo Arte Nova, como as que se encontram ao longo da Ria e o Museu Arte Nova, que celebra este movimento artístico.</li>
+                <li>Igreja de São Gonçalinho: Igreja histórica com festas populares únicas em sua homenagem, como o lançamento de cavacas do telhado.</li>
+                <li>Catedral de Aveiro (Sé de Aveiro): Também chamada Igreja de São Domingos, combina elementos históricos com arquitetura moderna.</li>
+            </ul>
+
+            <h3>Cultura e Tradições Locais</h3>
+            <ul>
+                <li>Festas de São Gonçalinho: Uma tradição local com celebrações animadas, procissões e o lançamento de cavacas, que atraem visitantes de toda a região.</li>
+                <li>Artesanato Local: Produtos típicos incluem cerâmica pintada à mão e miniaturas dos tradicionais barcos moliceiros.</li>
+            </ul>
+
+            <h3>Belezas Naturais e Áreas ao Ar Livre</h3>
+            <ul>
+                <li>Ria de Aveiro: Ideal para passeios de barco nos moliceiros, onde se pode explorar as lagoas e canais enquanto se aprende sobre a história local.</li>
+                <li>Salinas de Aveiro: Um local pitoresco onde se pode observar a produção de sal tradicional e a rica avifauna local, como flamingos.</li>
+                <li>Praias de Aveiro: Praia da Costa Nova, com as suas icónicas casas às riscas, e a Praia da Barra, onde está localizado o Farol de Aveiro, o mais alto de Portugal.</li>
+            </ul>
+
+            <h3>Arquitetura e Urbanismo</h3>
+            <ul>
+                <li>Canais da Cidade: Os canais de Aveiro são uma característica única, criando uma atmosfera semelhante à de Veneza, com pontes pitorescas e margens repletas de vida.</li>
+                <li>Edifícios Históricos: Casas tradicionais de pescadores e construções do século XIX e XX enriquecem a paisagem urbana da cidade.</li>
+                <li>Mercado do Peixe: Um edifício emblemático, repleto de vida e história, ideal para conhecer os produtos frescos e os sabores locais.</li>
+            </ul>
+        </section>
+
+        <!--Corpo de texto Botão Lazer-->
+        <section id="lazer" class="content">
+
+            <h3 class="secao-titulo">Atividades ao Ar Livre</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/CostaNova.png" alt="Praia da Costa Nova">
+                    <div class="texto">Praia da Costa Nova</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/Ria.png" alt="Ria de Aveiro">
+                    <div class="texto">Ria de Aveiro</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/Parque.png" alt="Parque Infante D. Pedro">
+                    <div class="texto">Parque Infante D. Pedro</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/PraiaBarra.png" alt="Praia da Barra">
+                    <div class="texto">Praia da Barra</div>
+                </div>
+            </div>
+
+            <h3 class="secao-titulo">Cultura e Entretenimento</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/Teatro.png" alt="Teatro Aveirense">
+                    <div class="texto">Teatro Aveirense</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/MuseuVistaAlegre.png" alt="Museu da Vista Alegre">
+                    <div class="texto">Museu da Vista Alegre</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/FeiraMarço.png" alt="Feira de Março">
+                    <div class="texto">Feira de Março</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/Universidade.png" alt="Universidade de Aveiro">
+                    <div class="texto">Universidade de Aveiro</div>
+                </div>
+            </div>
+
+            <h3 class="secao-titulo">Vida Noturna</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/Praça.png" alt="Praça do Peixe">
+                    <div class="texto">Praça do Peixe</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/AutocarroBar.png" alt="Autocarro Bar">
+                    <div class="texto">Autocarro Bar</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/EstaçaoLuz.png" alt="Estação da Luz">
+                    <div class="texto">Estação da Luz</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/SalClub.png" alt="Sal Club">
+                    <div class="texto">Sal Club</div>
+                </div>
+            </div>
+
+            <h3 class="secao-titulo">Atividades Familiares</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/Moliceiro.png" alt="Passeio de Moliceiro">
+                    <div class="texto">Passeio de Moliceiro</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/CienciaViva.png" alt="Ciência Viva">
+                    <div class="texto">Ciência Viva</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/ParqueCidade.png" alt="Parque da Cidade">
+                    <div class="texto">Parque da Cidade</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/Forum.png" alt="Fórum Aveiro">
+                    <div class="texto">Fórum Aveiro</div>
+                </div>
+            </div>
+        </section>
+
+        <!--Corpo de texto Botão Gastronomia-->
+        <section id="gastronomia" class="content">
+            <h3 class="secao-titulo">Pratos Tradicionais</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/ArrozMarisco.png" alt="Arroz de Marisco">
+                    <div class="texto">Arroz de Marisco</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/BacalhauLagareiro.png" alt="Bacalhau à Lagareiro">
+                    <div class="texto">Bacalhau à Lagareiro</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/espirais_robalo.png" alt="Espirais de Robalho">
+                    <div class="texto">Espirais de Robalo</div>
+                </div>
+            </div>
+            <h3 class="secao-titulo">Doces e Sobremesas</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/Ovos-Moles-de-Aveiro.png" alt="Ovos Moles">
+                    <div class="texto">Ovos Moles</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/LeiteCreme.png" alt="Leite Creme">
+                    <div class="texto">Leite Creme</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Aveiro/tripa.png" alt="Tripa de Aveiro">
+                    <div class="texto">Tripa de Aveiro</div>
+                </div>
+            </div>
+        </section>
+
+        <script src="Distritos.js" defer></script>
+
+    </main>
+
+    <!--Footer-->
+    <footer class="rounded-footer">
+        <div>
+            <p>Ana Almeida, Gonçalo Lameira, Susana Tavares</p>
+            <p>&copy; 2025 Plobe. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

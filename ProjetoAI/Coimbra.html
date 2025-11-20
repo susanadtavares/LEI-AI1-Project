@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/Imagens_Coimbra/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   <link rel="stylesheet" href="Distritos.css">
+    <link rel="stylesheet" href="Distritos.css">
+    <title>Coimbra</title>
+</head>
+<body>
+
+    <!--Barra de Navegação-->
+    <header>
+        <nav class="navbar-side">
+            <div class="nav-side">
+              <ul class="links-side">
+                <li>
+                  <div class="top">
+                    <svg onclick="hideSidebar()" class="close" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                  </div>
+                </li>
+                <li><a href="SobreNos.html">Sobre Nós</a></li>
+                <li><a href="Index.html#explorar">Explorar</a></li>
+                <li><a href="Index.html#faq">FAQ</a></li>
+                <li><a href="Contactar.html">Contactar</a></li>
+              </ul>
+            </div>
+          </nav>
+          <nav class="navbar">
+            <div class="logo">
+              <a href="Index.html">Plobe<span>*</span></a>
+            </div>
+            <div class="nav-links">
+              <ul class="nav-top">
+                <li><a href="SobreNos.html">Sobre Nós</a></li>
+                <li><a href="Index.html#explorar">Explorar</a></li>
+                <li><a href="Index.html#faq">FAQ</a></li>
+                <li><a href="Contactar.html">Contactar</a></li>
+              </ul>
+            </div>
+            <div class="date-time">
+              <div id="Time"></div>
+              <div id="Date"></div>
+              <script src="Distritos.js"></script>
+            </div>
+            <svg onclick="showSideBar()" class="sideBarIcon" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+          </nav>
+    </header>
+
+    <main>
+        <!--Imagem-->
+        <div class="hero">
+            <img src="images/Imagens_Coimbra/Coimbra.jpg" alt="Coimbra">
+            <div class="hero-next">
+                <h1>Coimbra</h1>
+            </div>
+        </div>
+
+        <!--Botões -->
+        <div class="tabs">
+            <button class="tab active" onclick="showSection('historia')">História</button>
+            <button class="tab" onclick="showSection('pontos-turisticos')">Pontos Turísticos</button>
+            <button class="tab" onclick="showSection('lazer')">Lazer</button>
+            <button class="tab" onclick="showSection('gastronomia')">Gastronomia</button>
+        </div>
+        
+        <!--Corpo de texto Botão História-->
+        <section id="historia" class="content">
+            <p> A história de Coimbra remonta ao período romano, sendo conhecida como Aeminium. Foi uma importante cidade da província romana da Lusitânia, com uma localização estratégica ao longo do rio Mondego, que favorecia o comércio e a defesa. Durante a época romana, Coimbra teve uma posição destacada no panorama urbano e administrativo.</p>
+            <p>  No século XII, Coimbra tornou-se a primeira capital de Portugal após a fundação do reino, durante o reinado de D. Afonso Henriques, o primeiro rei de Portugal. A cidade manteve uma grande importância religiosa e cultural durante a Idade Média.</p>
+            <p>No século XIII, com a fundação da Universidade de Coimbra em 1290 por D. Dinis, a cidade consolidou-se como o centro intelectual de Portugal. A universidade desempenhou um papel fundamental na educação, na formação de líderes políticos e no desenvolvimento cultural e científico do país. Durante o Renascimento, Coimbra viu o crescimento de um vasto património arquitetónico, incluindo a construção de importantes igrejas e edifícios universitários.</p>
+            <p> Durante os séculos XVII e XVIII, Coimbra continuou a ser um centro cultural e religioso, mas também enfrentou desafios relacionados com a instabilidade política. A cidade experimentou um crescimento urbano, com a construção de novos bairros, praças e edifícios notáveis. A Universidade de Coimbra tornou-se um dos maiores centros de saber do Império Português, atraindo estudantes de várias partes do mundo. A cidade foi também um importante centro de produção artesanal e comercial, especialmente nas áreas de tecido e cerâmica.</p>
+            <p> Hoje, Coimbra continua a ser uma das cidades mais emblemáticas de Portugal, conhecida pela sua universidade, pelo seu património histórico e cultural, e pelo ambiente académico vibrante. A Universidade de Coimbra, classificada como Património Mundial da Humanidade pela UNESCO, é um dos maiores centros de ensino superior do país e atrai estudantes de várias partes do mundo.</p>
+        </section>
+
+        <!--Corpo de texto Botão Pontos Turísticos-->
+        <section id="pontos-turisticos" class="content">
+            <h3>Universidade de Coimbra (Património Mundial da UNESCO)</h3>
+            <ul>
+                <li>Biblioteca Joanina: Uma das bibliotecas barrocas mais impressionantes do mundo, com tetos ornamentados e milhares de livros antigos.</li>
+                <li>Sala dos Capelos: Antiga sala do trono, usada para cerimónias solenes da universidade.</li>
+                <li>Torre da Universidade: Oferece vistas panorâmicas da cidade e do rio Mondego.</li>
+                <li>Jardim Botânico: Fundado no século XVIII, é um espaço tranquilo com uma coleção diversificada de plantas.</li>
+            </ul>
+
+            <h3>Centro Histórico</h3>
+            <ul>
+                <li>Sé Velha: Catedral românica do século XII, conhecida pela sua imponência e ligação à vida académica.</li>
+                <li>Sé Nova: Catedral jesuíta do século XVI, mais moderna e com estilo maneirista e barroco.</li>
+                <li>Rua da Sofia: Antiga rua das faculdades, com igrejas e edifícios históricos ligados à vida académica.</li>
+                <li>Arco de Almedina: Parte das antigas muralhas da cidade, marca a entrada para o centro medieval.</li>
+            </ul>
+
+            <h3>Mosteiros e Locais Religiosos</h3>
+            <ul>
+                <li>Mosteiro de Santa Clara-a-Velha: Convento gótico às margens do Mondego, agora um museu que narra a sua história.</li>
+                <li>Mosteiro de Santa Clara-a-Nova: Onde está sepultada a Rainha Santa Isabel, padroeira da cidade.</li>
+                <li>Conímbriga (Proximidade): Ruínas de uma das maiores cidades romanas em Portugal, com mosaicos bem preservados</li>
+            </ul>
+
+            <h3>Rio Mondego e Natureza</h3>
+            <ul>
+                <li>Parque Verde do Mondego: Espaço à beira-rio ideal para caminhadas, passeios de bicicleta e atividades de lazer.</li>
+                <li>Portugal dos Pequenitos: Parque temático que retrata em miniatura a arquitetura e cultura portuguesa, perfeito para famílias.</li>
+                <li>Vale das Flores e Choupal: Espaços verdes para caminhadas e relaxamento.</li>
+            </ul>
+        </section>
+
+        <!--Corpo de texto Botão Lazer-->
+        <section id="lazer" class="content">
+
+            <h3 class="secao-titulo">Atividades ao Ar Livre</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Jardim.png" alt="Jardim Botânico">
+                    <div class="texto">Jardim Botânico</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Parque.png" alt="Parque Verde">
+                    <div class="texto">Parque Verde</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Choupal.png" alt="Choupal Nacional">
+                    <div class="texto">Choupal Nacional</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Caiaque.png" alt="Passeio de Caiaque no Rio Mondego">
+                    <div class="texto">Passeio de Caiaque no Rio Mondego</div>
+                </div>
+            </div>
+
+            <h3 class="secao-titulo">Cultura e Entretenimento</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Teatro.png" alt="Teatro Gil Vicente">
+                    <div class="texto">Teatro Gil Vicente</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Convento.png" alt="Convento São Francisco">
+                    <div class="texto">Convento São Francisco</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/QueimaFitas.png" alt="Queima das Fitas">
+                    <div class="texto">Queima das Fitas</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Universidade.png" alt="Universidade de Coimbra">
+                    <div class="texto">Universidade de Coimbra</div>
+                </div>
+            </div>
+
+            <h3 class="secao-titulo">Vida Noturna</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Praça.png" alt="Praça da República">
+                    <div class="texto">Praça da República</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/NB.png" alt="NB Club">
+                    <div class="texto">NB Club</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Pintos.png" alt="Pintos">
+                    <div class="texto">Pintos</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Fado.png" alt="Casa de Fado">
+                    <div class="texto">Casa de Fado</div>
+                </div>
+            </div>
+
+            <h3 class="secao-titulo">Atividades Familiares</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Pequenitos.png" alt="Portugal dos Pequenitos">
+                    <div class="texto">Portugal dos Pequenitos</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Exploratorio.png" alt="Exploratório Ciência Viva">
+                    <div class="texto">Exploratório Ciência Viva</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/FunPark.png" alt="Feijão Verde Fun Park">
+                    <div class="texto">Feijão Verde Fun Park</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Forum.png" alt="Fórum Coimbra">
+                    <div class="texto">Fórum Coimbra</div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--Corpo de texto Botão Gastronomia-->
+        <section id="gastronomia" class="content">
+            <h3 class="secao-titulo">Pratos Tradicionais</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/LeitaoBairrada.jpg" alt="Leitão da Bairrada">
+                    <div class="texto">Leitão da Bairrada</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Lampreia.png" alt="Lampreia à Moda do Mondego">
+                    <div class="texto">Lampreia à Moda do Mondego</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/SopaPedra.png" alt="Sopa da Pedra">
+                    <div class="texto">Sopa da Pedra</div>
+                </div>
+            </div>
+            <h3 class="secao-titulo">Doces e Sobremesas</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/PasteisSantaClara.png" alt="Pastéis de Santa Clara">
+                    <div class="texto">Pastéis de Santa Clara</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/Arrufadas.png" alt="Arrufadas de Coimbra">
+                    <div class="texto">Arrufadas de Coimbra</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Coimbra/BarrigaFreira.png" alt="Barrigas de Freira">
+                    <div class="texto">Barrigas de Freira</div>
+                </div>
+            </div>
+        </section>
+
+        <script src="Distritos.js" defer></script>
+
+    </main>
+
+    <!--Footer-->
+    <footer class="rounded-footer">
+        <div>
+            <p>Ana Almeida, Gonçalo Lameira, Susana Tavares</p>
+            <p>&copy; 2025 Plobe. Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

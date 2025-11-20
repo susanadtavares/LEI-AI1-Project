@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/Imagens_Viana_do_Castelo/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="Distritos.css">
+    <title>Viana do Castelo</title>
+</head>
+<body>
+
+    <!--Barra de Navegação-->
+    <header>
+        <nav class="navbar-side">
+            <div class="nav-side">
+              <ul class="links-side">
+                <li>
+                  <div class="top">
+                    <svg onclick="hideSidebar()" class="close" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                  </div>
+                </li>
+                <li><a href="SobreNos.html">Sobre Nós</a></li>
+                <li><a href="Index.html#explorar">Explorar</a></li>
+                <li><a href="Index.html#faq">FAQ</a></li>
+                <li><a href="Contactar.html">Contactar</a></li>
+              </ul>
+            </div>
+          </nav>
+          <nav class="navbar">
+            <div class="logo">
+              <a href="Index.html">Plobe<span>*</span></a>
+            </div>
+            <div class="nav-links">
+              <ul class="nav-top">
+                <li><a href="SobreNos.html">Sobre Nós</a></li>
+                <li><a href="Index.html#explorar">Explorar</a></li>
+                <li><a href="Index.html#faq">FAQ</a></li>
+                <li><a href="Contactar.html">Contactar</a></li>
+              </ul>
+            </div>
+            <div class="date-time">
+              <div id="Time"></div>
+              <div id="Date"></div>
+              <script src="Distritos.js"></script>
+            </div>
+            <svg onclick="showSideBar()" class="sideBarIcon" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+          </nav>
+    </header>
+
+    <main>
+        <!--Imagem-->
+        <div class="hero">
+            <img src="images/Imagens_Viana_do_Castelo/Viana_do_Castelo1.jpeg" alt="Viana do Castelo">
+            <div class="hero-next">
+                <h1>Viana do Castelo</h1>
+            </div>
+        </div>
+
+        <!--Botões -->
+        <div class="tabs">
+            <button class="tab active" onclick="showSection('historia')">História</button>
+            <button class="tab" onclick="showSection('pontos-turisticos')">Pontos Turísticos</button>
+            <button class="tab" onclick="showSection('lazer')">Lazer</button>
+            <button class="tab" onclick="showSection('gastronomia')">Gastronomia</button>
+        </div>
+        
+        <!--Corpo de texto Botão História-->
+        <section id="historia" class="content">
+            <p>As origens de Viana do Castelo remontam à pré-história, com vestígios de ocupação celta e castros na região, como o emblemático Castro de Santa Luzia. Durante o domínio romano, a área foi integrada na província da Galécia e beneficiou da proximidade do rio Lima, que serviu como uma importante via de transporte e comércio.</p>
+            <p>Na Idade Média, a região ganhou importância com a fundação de um pequeno porto marítimo. Em 1258, o rei D. Afonso III concedeu o foral à então chamada Viana da Foz do Lima, promovendo o desenvolvimento económico e urbano. A cidade tornou-se um centro comercial relevante, com destaque para o comércio de sal, peixe e outros produtos marítimos.</p>
+            <p>Nos séculos XVII e XVIII, Viana enfrentou desafios devido ao declínio do comércio ultramarino e aos conflitos que marcaram a Europa, como a Guerra da Restauração. Apesar disso, a cidade continuou a desenvolver-se como um centro comercial regional e investiu na construção de infraestruturas religiosas e civis, incluindo conventos e palácios. O porto manteve-se ativo, especialmente na exportação de vinho e produtos agrícolas.</p>
+            <p>O século XIX trouxe mudanças significativas para Viana do Castelo, com a industrialização e a expansão da atividade pesqueira. Durante este período, a cidade tornou-se conhecida pela construção naval, que começou a ganhar importância como uma das atividades económicas principais. A pesca e a exportação de bacalhau consolidaram a ligação de Viana ao mar. A chegada do caminho-de-ferro ajudou a integrar a cidade na rede económica nacional.</p>
+            <p>No século XX, Viana do Castelo afirmou-se como um importante centro industrial e cultural. A indústria naval cresceu consideravelmente, tornando-se um dos pilares económicos da cidade. Durante o Estado Novo, a cidade recebeu atenção especial devido à sua ligação às tradições portuguesas, com eventos como a Romaria de Nossa Senhora da Agonia, que celebra as tradições marítimas e agrícolas. Após a Revolução dos Cravos de 1974, Viana entrou numa nova fase de modernização, com investimentos em infraestruturas e turismo.</p>
+            <p>Hoje, Viana do Castelo é uma cidade que combina a modernidade com a preservação das suas tradições. A indústria naval continua a ser um dos principais motores económicos, mas o turismo desempenha um papel crescente, impulsionado pelo património cultural, como a Basílica de Santa Luzia, o Centro Histórico e as praias da região. </p>
+        </section>
+
+        <!--Corpo de texto Botão Pontos Turísticos-->
+        <section id="pontos-turisticos" class="content">
+            <h3>Património Histórico e Arquitetónico</h3>
+            <ul>
+                <li>Santuário de Santa Luzia: com arquitetura neobizantina e vistas panorâmicas deslumbrantes sobre o rio Lima e o oceano Atlântico.</li>
+                <li>Centro Histórico: Ruas pitorescas com edifícios históricos, como a Praça da República, o Chafariz, os Paços do Concelho e a Igreja da Misericórdia.</li>
+                <li>Museu do Traje: Dedicado à preservação das tradições culturais da região, especialmente os trajes típicos usados em festas e romarias.</li>
+            </ul>
+
+            <h3>Cultura e Tradições Locais</h3>
+            <ul>
+                <li>Romaria de Nossa Senhora da Agonia: uma das maiores celebrações tradicionais de Portugal, com procissões, música, danças folclóricas e desfiles de barcos.</li>
+                <li>Artesanato Local: Viana do Castelo é conhecida pelo trabalho em ouro, especialmente os tradicionais "corações de Viana", símbolo da cidade.</li>
+                <li>Gastronomia: Os pratos típicos incluem o arroz de sarrabulho, lampreia, bacalhau à moda de Viana e os vinhos verdes da região.</li>
+            </ul>
+
+            <h3>Belezas Naturais e Áreas ao Ar Livre</h3>
+            <ul>
+                <li>Praias Atlânticas: Viana do Castelo é famosa pelas suas praias, como a Praia do Cabedelo, ideal para surf e kitesurf, e a Praia de Afife.</li>
+                <li>Rio Lima: Um cenário ideal para passeios de barco, canoagem ou simplesmente desfrutar da tranquilidade à beira do rio.</li>
+                <li>Serra de Santa Luzia: Um espaço perfeito para caminhadas e trilhos na natureza, com vistas espetaculares e um ambiente tranquilo.</li>
+            </ul>
+
+            <h3>Experiência de Mercado e Comércio Local</h3>
+            <ul>
+                <li>Feiras e Mercados Tradicionais: O mercado municipal oferece produtos frescos e artesanais, como queijos, enchidos e produtos agrícolas da região.</li>
+                <li>Lojas de Artesanato: Produtos típicos como bordados, joias em ouro e os famosos "corações de Viana" são destaque nas lojas locais.</li>
+                <li>Vinhos Verdes: Os vinhos da região do Minho são uma atração por si só, podendo ser adquiridos em adegas locais ou degustados em restaurantes da cidade.</li>
+            </ul>
+        </section>
+
+        <!--Corpo de texto Botão Lazer-->
+        <section id="lazer" class="content">
+            <h3 class="secao-titulo">Atividades ao Ar Livre</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/JardimPublico.png" alt="Jardim Público Marginal">
+                    <div class="texto">Jardim Público Marginal</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/ParqueCidade.png" alt="Parque da Cidade">
+                    <div class="texto">Parque da Cidade</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/Cabedelo.png" alt="Praia do Cabedelo">
+                    <div class="texto">Praia do Cabedelo</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/Serra.png" alt="Serra d'Arga">
+                    <div class="texto">Serra d'Arga</div>
+                </div>
+            </div>
+
+            <h3 class="secao-titulo">Cultura e Entretenimento</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/Teatro.png" alt="Teatro Sá de Miranda">
+                    <div class="texto">Teatro Sá de Miranda</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/MuseuTraje.png" alt="Museu do Traje">
+                    <div class="texto">Museu do Traje</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/NavioGil.png" alt="Navio Gil Eannes">
+                    <div class="texto">Navio Gil Eannes</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/FestaAgonia.png" alt="Festa da Nossa Senhora d'Agonia">
+                    <div class="texto">Festa da Nossa Senhora d'Agonia</div>
+                </div>
+            </div>
+
+            <h3 class="secao-titulo">Vida Noturna</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/CentroHist.png" alt="Centro Histórico">
+                    <div class="texto">Centro Histórico</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/Ribeirinha.png" alt="Zona Ribeirinha">
+                    <div class="texto">Zona Ribeirinha</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/Xapas.png" alt="Xapas Sessions">
+                    <div class="texto">Xapas Sessions</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/Picadeiro.png" alt="Palco do Picadeiro">
+                    <div class="texto">Palco do Picadeiro</div>
+                </div>
+            </div>
+
+            <h3 class="secao-titulo">Atividades Familiares</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/SantaLuzia.png" alt="Santuário de Santa Luzia">
+                    <div class="texto">Santuário de Santa Luzia</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/PasseioBarco.png" alt="Passeios de Barco">
+                    <div class="texto">Passeios de Barco</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/Ecopista.png" alt="Ecopista do Rio Lima">
+                    <div class="texto">Ecopista do Rio Lima</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/ParqueInfantil.png" alt="Parque Infantil da Marina">
+                    <div class="texto">Parque Infantil da Marina</div>
+                </div>
+            </div>
+        </section>
+
+        <!--Corpo de texto Botão Gastronomia-->
+        <section id="gastronomia" class="content">
+            <h3 class="secao-titulo">Pratos Tradicionais</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/Cabidela.png" alt="Arroz de Cabidela">
+                    <div class="texto">Arroz de Cabidela</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/feijoada.png" alt="Feijoada Minhota">
+                    <div class="texto">Feijoada Minhota</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/cordeiro.png" alt="Cordeiro Assado">
+                    <div class="texto">Cordeiro Assado</div>
+                </div>
+            </div>
+            <h3 class="secao-titulo">Doces e Sobremesas</h3>
+            <div class="galeria">
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/tortaviana.png" alt="Torta de Viana">
+                    <div class="texto">Torta de Viana</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/pao-lo.png" alt="Pão de Ló de Viana">
+                    <div class="texto">Pão de Ló de Viana</div>
+                </div>
+                <div class="item">
+                    <img src="images/Imagens_Viana_do_Castelo/chocolates.png" alt="Chocolates Avianense">
+                    <div class="texto">Chocolates Avianense</div>
+                </div>
+            </div>
+        </section>
+
+        <script src="Distritos.js" defer></script>
+
+    </main>
+
+    <!--Footer-->
+    <footer class="rounded-footer">
+        <div>
+            <p>Ana Almeida, Gonçalo Lameira, Susana Tavares</p>
+            <p>&copy; 2025 Plobe. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

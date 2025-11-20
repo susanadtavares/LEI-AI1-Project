@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 12px; 
+    margin: 10px; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.8rem; 
+    font-weight: bold;
+    text-decoration: none;
+    color: #333; 
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #8B5DFF; 
+}
+
+.logo a span {
+    color: #8B5DFF; 
+}
+
+/* Links de navegação */
+.nav-links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 50px; 
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333; 
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #8B5DFF; 
+    transform: scale(1.1); 
+}
+
+/* Ícone do menu lateral */
+.sideBarIcon {
+    display: block; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 102; 
+}
+
+.sideBarIcon:hover {
+    transform: scale(1.2); 
+}
+
+/* Barra de navegação lateral */
+.navbar-side {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 280px;
+    z-index: 101;
+    background-color: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(10px); 
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 20px;
+    transition: right 0.3s ease; 
+}
+
+.navbar-side.active {
+    right: 0; 
+}
+
+/* Links da barra lateral*/
+.nav-side ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-side ul li {
+    margin: 20px 0;
+}
+
+.nav-side ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-side ul li a:hover {
+    color: #8B5DFF;
+    transform: translateX(10px);
+}
+
+/* Data e hora */
+.date-time {
+    margin-right: 20px;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+  #Time {
+    font-size: 1.5rem; 
+    font-weight: normal;
+    margin-bottom: 0.2rem; 
+  }
+  #Date {
+    font-size: 1rem; 
+    font-weight: bold;
+  }
+
+/*Estilos container do SobreNos*/ 
+.container {
+    text-align: center;
+    max-width: 800px;
+    border-radius: 8px;
+    padding: 40px 20px;
+    margin: auto;
+    margin-top: 8vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.team-member {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h2 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.team-member p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Estilo do footer */
+.rounded-footer {
+    background-color: #d3d3d3; 
+    padding: 20px; 
+    text-align: center; 
+    border-radius: 15px; 
+    margin: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Texto do footer */
+.rounded-footer p {
+    margin: 10px 0; 
+    color: #333; 
+    font-size: 14px; 
+    line-height: 1.6; 
+}
+
+/* Ajustes para telas a partir de 350px */
+@media (min-width: 350px) {
+    .navbar {
+        flex-direction: row;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .nav-links ul li a {
+        display: none;
+    }
+
+    .logo a {
+        font-size: 2rem;
+    }
+
+    .sideBarIcon {
+        display: flex;
+    }
+
+    .team-member {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/*Esconde elementos da navbar e ajusta o logo para telas menores que 900px*/
+@media (max-width: 900px) {
+    .nav-links {
+        display: none; 
+    }
+
+    .sideBarIcon {
+        display: block; 
+    }
+
+    .logo a {
+        font-size: 1.6rem; 
+    }
+}
+
+/* Ajustes para telas a partir de 900px */
+@media (min-width: 900px) {
+    .nav-links ul li a {
+        display: flex;
+    }
+
+    .sideBarIcon {
+        display: none;
+    }
+
+    .team {
+        flex-direction: row; 
+    }
+
+    .team-member {
+        flex: 1 1 calc(33.333% - 20px); 
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+/* Ajustes para telas menores que 1200px */
+@media (min-width: 1200px) {
+    .nav-links ul li a {
+        display: flex;
+    }
+
+    .sideBarIcon {
+        display: none;
+    }
+
+    .team {
+        flex-direction: row; 
+    }
+
+    .team-member {
+        flex: 1 1 calc(25% - 20px);
+        max-width: calc(25% - 20px);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .team-member img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Ajustes para telas entre 400px e 899px */
+@media (min-width: 400px) and (max-width: 899px) {
+    .team {
+        flex-direction: column;
+    }
+
+    .team-member {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .team-member img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team-member p {
+        font-size: 0.85rem;
+    }
+
+    .team {
+        flex-direction: column;
+    }
+
+    .team-member {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .team-member img {
+        width: 140px;
+        height: 140px;
+    }
+}

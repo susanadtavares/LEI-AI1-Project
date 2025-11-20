@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 12px; 
+    margin: 10px; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.8rem; 
+    font-weight: bold;
+    text-decoration: none;
+    color: #333; 
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #8B5DFF; 
+}
+
+.logo a span {
+    color: #8B5DFF; 
+}
+
+/* Links de navegação */
+.nav-links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 50px; 
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333; 
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #8B5DFF; 
+    transform: scale(1.1); 
+}
+
+/* Ícone do menu lateral */
+.sideBarIcon {
+    display: block; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 102; 
+}
+
+.sideBarIcon:hover {
+    transform: scale(1.2);
+}
+
+/* Barra de navegação lateral */
+.navbar-side {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 280px;
+    z-index: 101;
+    background-color: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(10px); 
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 20px;
+    transition: right 0.3s ease; 
+}
+
+.navbar-side.active {
+    right: 0; 
+}
+
+/* Links da barra lateral*/
+.nav-side ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-side ul li {
+    margin: 20px 0;
+}
+
+.nav-side ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-side ul li a:hover {
+    color: #8B5DFF;
+    transform: translateX(10px); 
+}
+
+/* Data e hora */
+.date-time {
+    margin-right: 20px;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#Time {
+    font-size: 1.5rem; 
+    font-weight: normal;
+    margin-bottom: 0.2rem; 
+}
+
+#Date {
+    font-size: 1rem; 
+    font-weight: bold;
+}
+
+/* Secção */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    height: calc(90vh - 110px); 
+    margin: 110px 20px 0 20px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-next {
+    position: absolute;
+    bottom: 1rem;
+    left: 3.5rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    text-align: left;
+    width: 90%; 
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 1500px;
+    border-radius: 10px;
+
+}
+
+.tab {
+    background-color: #e0e0e0;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #ccc;
+}
+
+.tab.active {
+    background-color: #8B5DFF;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteúdo das tabs*/
+.content {
+    display: none; 
+    padding: 2rem;
+    background-color: #fff;
+    max-width: 1500px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    letter-spacing: 0.03em;
+}
+
+.content p{
+    margin-bottom: 1.5rem;
+}
+
+.content h3{
+    font-size: 26px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-left: 10px;
+}
+
+.content ul{
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+    list-style: square;
+}
+
+.content ul li {
+    margin-bottom: 0.8rem; 
+    text-indent: 1rem; 
+    line-height: 1.6;
+}
+
+/*Estilo da galeria*/
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 40px; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+}
+
+/*Estilo dos itens*/
+.item {
+    text-align: center;
+}
+
+.item .texto {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.galeria img, .item img {
+    object-fit: cover;
+    max-width: 300px; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+/*Estilo para gastronomia*/
+#gastronomia .secao-titulo {
+    text-align: center; 
+}
+
+#gastronomia .galeria {
+    justify-content: center; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+}
+
+#gastronomia .item img {
+    margin: 0 auto; 
+    display: block; 
+    max-width: 100%; 
+    border-radius: 10px; 
+}
+
+/* Estilo do footer */
+.rounded-footer {
+    background-color: #d3d3d3; 
+    padding: 20px; 
+    text-align: center; 
+    border-radius: 15px; 
+    margin: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.rounded-footer p {
+    margin: 10px 0; 
+    color: #333; 
+    font-size: 14px; 
+    line-height: 1.6; 
+}
+
+
+/* Ajustes para telas a partir de 350px */
+@media (min-width: 350px) {
+    .navbar {
+        flex-direction: row;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .nav-links ul li a {
+        display: none;
+    }
+
+    .logo a {
+        font-size: 2rem;
+    }
+
+    .sideBarIcon {
+        display: flex;
+    }
+
+    .team-member {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/*Esconde elementos da navbar e ajusta o logo para telas menores que 900px*/
+@media (max-width: 900px) {
+    .nav-links {
+        display: none; 
+    }
+
+    .sideBarIcon {
+        display: block; 
+    }
+
+    .logo a {
+        font-size: 1.6rem; 
+    }
+}
+
+/* Ajustes para telas a partir de 900px */
+@media (min-width: 900px) {
+    .nav-links ul li a {
+        display: flex;
+    }
+
+    .sideBarIcon {
+        display: none;
+    }
+
+    .team {
+        flex-direction: row; 
+    }
+
+    .team-member {
+        flex: 1 1 calc(33.333% - 20px); 
+        max-width: calc(33.333% - 20px);
+    }
+
+    .sideBarIcon {
+        display: none; 
+    }
+}
+
+/* Ajustes para telas a partir de 1200px */
+@media (min-width: 1200px) {
+    .nav-links ul li a {
+        display: flex;
+    }
+
+    .sideBarIcon {
+        display: none;
+    }
+
+    .team {
+        flex-direction: row; 
+    }
+
+    .team-member {
+        flex: 1 1 calc(33.333% - 20px); 
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+/* Ajustes para telas menores que 1024px */
+@media (max-width: 1024px) {
+    .galeria {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
+    }
+
+    .item img {
+        max-width: 100%; 
+        height: auto; 
+        border-radius: 10px; 
+    }
+
+    .item .texto {
+        font-size: 14px; 
+    }
+
+    .tabs {
+        align-items: center; 
+        gap: 1rem; 
+        width: 95%;
+    }
+
+    .hero{
+
+        height: calc(55vh - 110px); 
+    }
+
+    .content {
+        padding: 1rem; 
+        font-size: 20px; 
+        line-height: 1.5; 
+        max-width: 95%; 
+    }
+
+}
+
+/* Reorganiza os botões de abas em duas colunas */
+@media (max-width: 640px) and (min-width: 481px) {
+    .tabs {
+        flex-wrap: wrap; 
+        gap: 10px; 
+    }
+
+    .tab {
+        width: calc(50% - 10px); 
+    }
+}
+
+
+
+/* Melhora o layout em dispositivos compactos*/
+@media (max-width: 480px) {
+    
+    .hero {
+        height: calc(55vh - 110px); 
+        margin: 100px 5px 0 5px; 
+        border-radius: 20px; 
+    }
+
+    .hero-next {
+        font-size: 1.2rem; 
+        left: 1.5rem; 
+        text-align: center;
+        width: 90%; 
+    }
+
+    .tabs {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 0.5rem; 
+        width: 80%;
+    }
+
+    .tab {
+        font-size: 16px; 
+        width: 90%; 
+        text-align: center; 
+    }
+
+    .content {
+        padding: 1rem; 
+        font-size: 16px; 
+        line-height: 1.5; 
+        max-width: 95%; 
+    }
+
+    .content h3 {
+        font-size: 20px; 
+        margin-top: 1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .content ul {
+        margin-left: 0.5rem; 
+    }
+
+    .content ul li {
+        text-indent: 0.5rem; 
+        margin-bottom: 0.4rem;
+    }
+
+    .rounded-footer {
+        padding: 10px; 
+        margin: 10px; 
+        border-radius: 10px; 
+    }
+
+    .rounded-footer p {
+        font-size: 12px; 
+        line-height: 1.4; 
+    }
+    
+    .galeria {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+    }
+
+    .item img {
+        max-width: 100%; 
+    }
+
+    .item .texto {
+        font-size: 12px; 
+    }
+
+    #gastronomia .galeria {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+    }
+
+    #gastronomia .item img {
+        width: 100%; 
+        height: auto; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+
+    #gastronomia .item .texto {
+        font-size: 14px; 
+        text-align: center; 
+        margin-top: 5px; 
+    }
+}
+
+/* Ajustes para telas entre 900px e 1500px */
+@media (min-width: 900px) and (max-width: 1500px) {
+    .navbar {
+        padding: 10px 20px; 
+        font-size: 1.1rem; 
+    }
+
+    .hero {
+        height: calc(90vh - 110px); 
+        margin: 110px 20px 0 20px;
+    }
+
+    .tabs {
+        max-width: 95%; 
+        gap: 1rem; 
+    }
+
+    .tab {
+        padding: 0.5rem 1.5rem; 
+        font-size: 20px; 
+    }
+
+    .content {
+        max-width: 95%; 
+        padding: 1.5rem; 
+        font-size: 20px; 
+    }
+
+    .galeria {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px; 
+    }
+
+    .item img {
+        max-width: 100%; 
+        height: auto; 
+        border-radius: 10px; 
+    }
+
+    .item .texto {
+        font-size: 16px; 
+    }
+
+    .rounded-footer {
+        padding: 20px; 
+        font-size: 14px; 
+        margin: 20px; 
+    }
+}
